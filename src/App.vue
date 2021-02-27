@@ -12,6 +12,7 @@
 <style lang="scss">
 :root {
   --blue: #28527a;
+  --bright-blue : #8ac4d0;
   --yellow: #f4d160;
   --bright-yellow: #fbeeac;
   --text-color: black;

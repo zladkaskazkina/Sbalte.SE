@@ -3,9 +3,10 @@
     <h4 class="nadpis">Zabalím si</h4>
     <div class="items-box">
       <span class="item" v-for="(item, index) in listItems" :key="index">
-        <list-item :id="index" :name="item.name" :count="item.count" @complete-item="completed(index)"></list-item>
+        <list-item :id="index" :name="item.name" :count="item.count" :checked="item.checked" @complete-item="completed(index)"></list-item>
       </span>
     </div>
+    <button class="pridat" @click="addItem">+</button>
   </div>
 </template>
 <script>
@@ -22,14 +23,19 @@ export default {
   },
   methods: {
     completed(index) {
-      this.listItems[index].count = -1;
+      this.listItems[index].checked = !this.listItems[index].checked;
+      localStorage.setItem(this.$route.params.id, JSON.stringify(this.listItems));
+    },
+    addItem() {
+      const name = prompt("Název položky");
+      console.log(name);
+      this.listItems.push({name, count: 1})
       localStorage.setItem(this.$route.params.id, JSON.stringify(this.listItems));
     }
   },
   created() {
     this.listItems = JSON.parse(localStorage.getItem(this.$route.params.id));
-  }
-  
+  }  
 }
 </script>
 
@@ -39,12 +45,15 @@ export default {
     color: #28527a;
     width: 250px;
     text-align: left;
-    /* align-items: center; */
     margin-left: 10%;
     padding: 15px 15px;
   }
   .item {
     padding-top: 5px;
     padding-bottom: 5px;
+    display: block;
+  }
+  .pridat {
+    background-color: var(--bright-blue);
   }
 </style>
