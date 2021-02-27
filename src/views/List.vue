@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h4 class="nadpis">Zabalím si</h4>
     <div class="items-box">
       <span class="item" v-for="(item, index) in listItems" :key="item.name+index">
