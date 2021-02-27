@@ -1,29 +1,29 @@
 <template>
-
   <div class="home">
-    <router-link href="/packlists">Sbalte.se!</router-link>
-    <BaseButton> "Sbalte.se!" </BaseButton>
+    <BaseButton> Sbalte.se! </BaseButton>
+    <img src="../assets/checklist.svg" />
   </div>
 </template>
 
 <script>
-import BaseButton from "../components/BaseButton.vue"
+import BaseButton from "../components/BaseButton.vue";
 export default {
-  name: 'Home',
-  components:{BaseButton},
+  name: "Home",
+  components: { BaseButton },
   data() {
-    return {
-
-    }
+    return {};
   },
   methods: {
-    openLists () {
-
-    }
-  }
-}
+    openLists() {},
+  },
+};
 </script>
 
+
+
 <style scoped>
-      
+  img {
+    width: 300px;
+    height: 400px;
+}
 </style>

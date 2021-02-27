@@ -1,37 +1,35 @@
 <template>
   <div>
-    <button>
-      <router-link to='/packlists'>
-        Sbalte.se!
+    <button class="button">
+      <router-link to="/packlists" class="routerbutton">
+        <slot> </slot>
       </router-link>
     </button>
   </div>
 </template>
 <script>
-
 export default {
   name: "BaseButton",
-  components:{},
-  props:[],
-  data(){
-    return {
-
-    }
+  components: {},
+  props: [],
+  data() {
+    return {};
   },
-  methods: {
-
-  }
-}
+  methods: {},
+};
 </script>
-<style>
-  button {
-      background-color: #ffefa1; /* Yellow */
-      border: dotted;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-    }
+<style scoped>
+.button {
+  background-color: var(--bright-yellow);
+  border: dotted;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.routerbutton {
+  text-decoration: none;
+  color: var(--text-color);
+}
 </style>

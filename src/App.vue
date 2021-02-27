@@ -14,6 +14,7 @@
   --blue: #28527a;
   --yellow: #f4d160;
   --bright-yellow: #fbeeac;
+  --text-color: black;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap");
