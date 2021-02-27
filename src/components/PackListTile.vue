@@ -8,7 +8,7 @@
 <script>
 
 export default {
-  name: "ListItem",
+  name: "PackListTile",
   emits: ["choose-list"],
   components:{},
   props:["icon", "name"],
@@ -25,5 +25,8 @@ export default {
 }
 </script>
 <style>
-  
+  img {
+    background-color: #fbeeac;
+    width: 80px;
+  }  
 </style>
