@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Sbalte.se!</router-link> |
+      <router-link to="/">Home</router-link> |
+      <router-link to="/packlists">Sbalte.se!</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
+:root {
+  --blue: #28527a;
+  --yellow: #f4d160;
+  --bright-yellow: #fbeeac;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap");
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,8 +27,8 @@
 }
 
 body {
-  background-color: #28527a;
-  color: #fbeeac;
+  background-color: var(--blue);
+  color: var(--bright-yellow);
 }
 
 #nav {
@@ -43,5 +49,4 @@ body {
   line-height: 80px;
   font-size: 25px;
 }
-  
 </style>
