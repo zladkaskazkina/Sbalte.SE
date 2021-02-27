@@ -1,6 +1,6 @@
 <template>
-  <div>
-    
+  <div class="tile">
+    <img :src="icon" :alt="name">
   </div>
 </template>
 <script>
@@ -8,8 +8,8 @@
 export default {
   name: "ListItem",
   components:{},
-  props:[],
-  data(){
+  props:["icon", "name"],
+  data() {
     return {
 
     }
