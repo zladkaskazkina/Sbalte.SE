@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Domov</router-link> |
       <router-link to="/packlists">Sbalte.se!</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">O nás</router-link>
     </div>
     <router-view />
   </div>
@@ -18,10 +18,11 @@
   --text-color: black;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -34,21 +35,23 @@ body {
 }
 
 #nav {
-  padding: 30px;
+  padding: 1rem;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--bright-yellow);
 
     &.router-link-exact-active {
-      color: #f4d160;
+      color: var(--yellow);
     }
   }
 }
 
 .nadpis {
-  background-color: #f4d160;
+  background-color: var(--yellow);
   line-height: 80px;
   font-size: 25px;
+  margin: 5px;
+  // margin: 0.5rem;
 }
 </style>

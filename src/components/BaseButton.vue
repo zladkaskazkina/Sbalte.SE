@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <button class="button">
       <router-link to="/packlists" class="routerbutton">
         <slot> </slot>
@@ -20,16 +20,17 @@ export default {
 </script>
 <style scoped>
 .button {
-  background-color: var(--bright-yellow);
-  border: dotted;
-  padding: 15px 32px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--yellow);
+  border: none;
+  padding: 20px 32px;
   text-align: center;
-  font-size: 16px;
+  font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
 }
 .routerbutton {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--blue);
 }
 </style>

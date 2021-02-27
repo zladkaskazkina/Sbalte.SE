@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h4 class="nadpis">Kam to bude?</h4>
     <span v-for="packList in packLists" :key="packList.name">
       <!-- {{packList.name}} : {{packList.icon}} -->
@@ -41,5 +41,7 @@ export default {
 </script>
 
 <style>
-  
+  .container{
+    margin: 0.5rem;
+  }
 </style>

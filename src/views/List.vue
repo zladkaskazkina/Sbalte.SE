@@ -46,9 +46,9 @@ export default {
   .items-box {
     background-color: #fbeeac;
     color: #28527a;
-    width: 250px;
+    width: 80%;
     text-align: left;
-    margin-left: 20px;
+    margin: auto;
     padding: 15px 15px;
   }
   .item {
@@ -57,6 +57,13 @@ export default {
     display: block;
   }
   .pridat {
-    background-color: var(--bright-blue);
+    background-color: var(--yellow);
+    border: none;
+    color: var(--blue);
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
   }
 </style>

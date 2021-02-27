@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="listItem">
     <input type="checkbox" :id="id" v-model="completed" @click="completeItem">
     <label :class="{checked: completed}" :for="id" > {{ name }}</label>
-    <button @click="deleteItem" class="btn-krizik">
-      <img :src="require(`@/assets/krizik.svg`)" class="krizik">
-    </button>
+    <span  @click="deleteItem" class="krizik">
+      ×
+    </span>
   </div>
 </template>
 <script>
@@ -32,18 +32,29 @@ export default {
 <style>
   label {
     font-size: 1.3rem;
+    flex-grow: 1;
+    padding: 5px;
+    border-bottom: 1px solid #f4d160;
   }
   .checked {
     text-decoration: line-through;
     color: grey;
   }
   .krizik {
-    width: 15px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    /* width: 1rem; */
+    /* height: 1rem; */
+    display: flex;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
   }
-  .btn-krizik {
-    background-color: var(--bright-blue);
-    width: 10px;
-    height: 10px;
-    
+  .listItem {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
+  
 </style>

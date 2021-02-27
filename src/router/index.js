@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Login from '../views/Login.vue';
+import About from '../views/About.vue';
 import List from '../views/List.vue';
 import PackLists from '../views/PackLists.vue';
 
@@ -14,9 +14,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: '/about',
+    name: 'About',
+    component: About
   },
   {
     path: '/list/:id',
