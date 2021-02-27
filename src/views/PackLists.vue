@@ -33,11 +33,8 @@ export default {
       const packList = this.packLists.find((packList) => {
         return name === packList.name
       })
-      console.log(packList.items)
-
       localStorage.setItem(packList.id, JSON.stringify(packList.items))
       this.$router.push(`/list/${packList.id}`)
-
     }
   }
 }

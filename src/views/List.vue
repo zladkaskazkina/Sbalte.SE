@@ -2,8 +2,8 @@
   <div>
     <h4 class="nadpis">Zabalím si</h4>
     <div class="items-box">
-      <span class="item" v-for="(item, index) in listItems" :key="index">
-        <list-item :id="index" :name="item.name" :count="item.count" :checked="item.checked" @complete-item="completed(index)"></list-item>
+      <span class="item" v-for="(item, index) in listItems" :key="item.name+index">
+        <list-item :id="index" :name="item.name" :count="item.count" :checked="item.checked" @complete-item="completed(index)" @delete-item="deleteItem(index)"></list-item>
       </span>
     </div>
     <button class="pridat" @click="addItem">+</button>
@@ -28,8 +28,11 @@ export default {
     },
     addItem() {
       const name = prompt("Název položky");
-      console.log(name);
       this.listItems.push({name, count: 1})
+      localStorage.setItem(this.$route.params.id, JSON.stringify(this.listItems));
+    },
+    deleteItem(index) {
+      this.listItems.splice(index, 1)
       localStorage.setItem(this.$route.params.id, JSON.stringify(this.listItems));
     }
   },
@@ -45,7 +48,7 @@ export default {
     color: #28527a;
     width: 250px;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 20px;
     padding: 15px 15px;
   }
   .item {

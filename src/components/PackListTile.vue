@@ -31,6 +31,7 @@ export default {
   .tile {
     display: flex;
     align-items: center;
+    padding: 5px 5px;
   }
   .tile img {
     background-color: var(--bright-yellow);
