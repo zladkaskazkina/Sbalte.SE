@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: "ListItem",
+  name: "BaseButton",
   components:{},
   props:[],
   data(){
@@ -24,5 +24,14 @@ export default {
 }
 </script>
 <style>
-  
+  button {
+      background-color: #ffefa1; /* Yellow */
+      border: dotted;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
 </style>
