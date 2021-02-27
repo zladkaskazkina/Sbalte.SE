@@ -28,8 +28,16 @@ export default {
     packLists: db.collection('pack_lists'),
   },
   methods: {
-    loadList() {
-      
+    loadList(name) {
+      console.log("Name", name)
+      const packList = this.packLists.find((packList) => {
+        return name === packList.name
+      })
+      console.log(packList.items)
+
+      localStorage.setItem(packList.id, JSON.stringify(packList.items))
+      this.$router.push(`/list/${packList.id}`)
+
     }
   }
 }
