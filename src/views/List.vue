@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in listItems" :key="item.id">
-        <list-item :id="item.id" :name="item.name"></list-item>
+      <li v-for="(item, index) in listItems" :key="index">
+        <list-item :id="index" :name="item.name" :count="item.count" @complete-item="completed(index)"></list-item>
       </li>
     </ul>
   </div>
@@ -20,10 +20,13 @@ export default {
     }
   },
   methods: {
-
+    completed(index) {
+      this.listItems[index].count = -1;
+      localStorage.setItem(this.$route.params.id, JSON.stringify(this.listItems));
+    }
   },
   created() {
-    this.listItems = localStorage.getItem(this.$route.params.id)
+    this.listItems = JSON.parse(localStorage.getItem(this.$route.params.id));
   }
   
 }
