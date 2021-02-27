@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 class="kam-to-bude">Kam to bude?</h4>
+    <h4 class="nadpis">Kam to bude?</h4>
     <span v-for="packList in packLists" :key="packList.name">
       <!-- {{packList.name}} : {{packList.icon}} -->
       <pack-list-tile @choose-list="loadList" :name="packList.name" :icon="packList.icon"></pack-list-tile>
@@ -42,11 +42,7 @@ export default {
   }
 }
 </script>
+
 <style>
-  .kam-to-bude {
-    background-color: #f4d160;
-    line-height: 50px;
-    font-size: 25px;
-  }
   
 </style>

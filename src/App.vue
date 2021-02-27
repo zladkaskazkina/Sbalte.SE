@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Sbalte.se!</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -37,4 +37,11 @@ body {
     }
   }
 }
+
+.nadpis {
+  background-color: #f4d160;
+  line-height: 80px;
+  font-size: 25px;
+}
+  
 </style>
