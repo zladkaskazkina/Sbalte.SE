@@ -1,6 +1,10 @@
 <template>
   <div>
-    
+    <button>
+      <router-link to='/packlists'>
+        Sbalte.se!
+      </router-link>
+    </button>
   </div>
 </template>
 <script>
