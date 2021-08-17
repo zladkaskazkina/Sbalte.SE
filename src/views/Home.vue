@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <BaseButton> Sbalte.se! </BaseButton>
-    <img src="../assets/checklist.svg" />
+    <BaseButton> Sbalte se! </BaseButton>
+    <img src="https://www.fi.muni.cz/~xhajna/logo_bright.png" />
   </div>
 </template>
 
@@ -19,12 +19,10 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
   img {
-    width: 300px;
-    height: 400px;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 400px;
   }
-  
 </style>

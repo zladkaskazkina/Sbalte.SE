@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Domov</router-link> |
-      <router-link to="/packlists">Sbalte.se!</router-link> |
+      <router-link to="/packlists">Sbalte se!</router-link> |
       <router-link to="/about">O nás</router-link>
     </div>
     <router-view />
@@ -26,7 +26,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--bright-yellow);
 }
 
 body {
@@ -36,6 +36,13 @@ body {
 
 #nav {
   padding: 1rem;
+  font-size: 25px;
+  border-bottom: var(--yellow) dotted 5px;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 20px;
+  }
 
   a {
     font-weight: bold;
@@ -49,9 +56,9 @@ body {
 
 .nadpis {
   background-color: var(--yellow);
+  color: var(--blue);
   line-height: 80px;
   font-size: 25px;
   margin: 5px;
-  // margin: 0.5rem;
 }
 </style>

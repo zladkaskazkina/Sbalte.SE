@@ -7,7 +7,8 @@
       <li>Katka Mackovíková</li>
       <li>Lucie Poslední</li>
     </ul>
-    <p>Hackathon Czechitas 2021</p>
+    <p>Webová aplikácia, aby ste už nikdy na nič nezabudli.</p>
+    <p>Projekt vznikol pri účasti na Hackathone Czechitas 2021</p>
   </div>
 </template>
 

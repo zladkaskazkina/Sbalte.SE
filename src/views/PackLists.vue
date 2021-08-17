@@ -2,7 +2,6 @@
   <div class="container">
     <h4 class="nadpis">Kam to bude?</h4>
     <span v-for="packList in packLists" :key="packList.name">
-      <!-- {{packList.name}} : {{packList.icon}} -->
       <pack-list-tile @choose-list="loadList" :name="packList.name" :icon="packList.icon"></pack-list-tile>
     </span>
   
@@ -29,7 +28,6 @@ export default {
   },
   methods: {
     loadList(name) {
-      console.log("Name", name)
       const packList = this.packLists.find((packList) => {
         return name === packList.name
       })

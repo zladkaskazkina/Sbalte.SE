@@ -49,6 +49,7 @@ export default {
     width: 80%;
     text-align: left;
     margin: auto;
+    margin-top: 15px;
     padding: 15px 15px;
   }
   .item {

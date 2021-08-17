@@ -36,6 +36,7 @@ export default {
   .tile img {
     background-color: var(--bright-yellow);
     width: 80px;
+    padding: 5px;
   }
   .tile span {
     padding: 1rem;
